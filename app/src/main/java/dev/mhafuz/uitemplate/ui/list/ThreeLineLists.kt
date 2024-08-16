@@ -35,15 +35,6 @@ import androidx.compose.ui.unit.dp
 import dev.mhafuz.uitemplate.R
 
 @Composable
-fun List(modifier: Modifier = Modifier) {
-    LazyColumn(modifier) {
-        items(10) {
-            ArticleItem2()
-        }
-    }
-}
-
-@Composable
 fun ThreeLineItem(
     modifier: Modifier = Modifier,
     labelText: String = "Headline",
