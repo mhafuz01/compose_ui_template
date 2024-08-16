@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ui Template</string>
+    <string name="delete_text">Confirm that you want to delete.</string>
+</resources>
