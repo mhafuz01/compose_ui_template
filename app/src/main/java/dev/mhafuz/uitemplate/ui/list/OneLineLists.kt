@@ -37,11 +37,14 @@ fun OneLineItem(modifier: Modifier = Modifier, labelText: String) {
     Box(
         modifier
             .fillMaxWidth()
-            .height(56.dp)
-            .padding(16.dp, 8.dp),
+            .height(56.dp),
         contentAlignment = Alignment.CenterStart
     ) {
-        Text(text = labelText, style = typography.bodyLarge)
+        Text(
+            text = labelText,
+            style = typography.bodyLarge,
+            modifier = Modifier.padding(16.dp, 8.dp)
+        )
     }
 }
 
