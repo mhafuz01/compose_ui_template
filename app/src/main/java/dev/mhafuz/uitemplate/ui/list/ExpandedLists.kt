@@ -28,39 +28,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun List(modifier: Modifier = Modifier) {
-    val expandedContent = @Composable {
-        Column {
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .height(56.dp)
-                    .padding(16.dp, 8.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Spacer(modifier = Modifier.width(24.dp + 16.dp))
-                Text(text = "Expanded item 1", style = typography.bodyLarge)
-            }
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .height(56.dp)
-                    .padding(16.dp, 8.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Spacer(modifier = Modifier.width(24.dp + 16.dp))
-                Text(text = "Expanded item 2", style = typography.bodyLarge)
-            }
-        }
-    }
-    LazyColumn(modifier) {
-        items(3) {
-            ExpandedListItem(expandedContent = expandedContent)
-        }
-    }
-}
-
-@Composable
 fun ExpandedListItem(
     modifier: Modifier = Modifier,
     labelText: String = "Single-line item",
