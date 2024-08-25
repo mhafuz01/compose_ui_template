@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import dev.mhafuz.uitemplate.ui.list.List
+import dev.mhafuz.uitemplate.ui.NavigationDrawer
 import dev.mhafuz.uitemplate.ui.theme.UiTemplateTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             UiTemplateTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    List(modifier = Modifier.padding(innerPadding))
+                    NavigationDrawer(Modifier.fillMaxSize().padding(innerPadding))
                 }
             }
         }

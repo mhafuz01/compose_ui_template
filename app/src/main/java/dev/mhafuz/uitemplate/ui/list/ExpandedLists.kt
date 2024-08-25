@@ -33,7 +33,9 @@ fun ExpandedListItem(
     var showExpandedContent by rememberSaveable { mutableStateOf(true) }
     Column(modifier.clickable(onClick = { showExpandedContent = !showExpandedContent })) {
         Row(
-            Modifier.height(56.dp).padding(16.dp, 8.dp),
+            Modifier
+                .height(56.dp)
+                .padding(16.dp, 8.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
