@@ -1,4 +1,4 @@
-package dev.mhafuz.uitemplate.ui
+package dev.mhafuz.uitemplate.ui.navigation.drawer
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

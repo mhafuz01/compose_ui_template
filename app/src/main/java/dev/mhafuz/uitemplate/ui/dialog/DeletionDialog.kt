@@ -1,4 +1,4 @@
-package dev.mhafuz.uitemplate.ui
+package dev.mhafuz.uitemplate.ui.dialog
 
 import androidx.annotation.StringRes
 import androidx.compose.material3.AlertDialog
