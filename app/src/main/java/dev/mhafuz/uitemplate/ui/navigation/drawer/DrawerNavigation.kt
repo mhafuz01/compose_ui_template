@@ -32,14 +32,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import dev.mhafuz.uitemplate.util.navigation.Screen
 import kotlinx.coroutines.launch
-
-private enum class Screen(val text: String, val icon: ImageVector) {
-    Inbox("Inbox", Icons.Default.Inbox),
-    Outbox("Outbox", Icons.AutoMirrored.Default.Send),
-    Favorite("Favorite", Icons.Default.Favorite),
-    Trash("Trash", Icons.Default.Delete)
-}
 
 @Composable
 fun NavigationDrawer(
