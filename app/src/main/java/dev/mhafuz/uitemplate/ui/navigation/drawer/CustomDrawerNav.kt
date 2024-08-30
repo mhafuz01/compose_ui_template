@@ -24,11 +24,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Diamond
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -54,7 +50,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
@@ -62,18 +57,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import dev.mhafuz.uitemplate.R
+import dev.mhafuz.uitemplate.util.navigation.DrawerState
+import dev.mhafuz.uitemplate.util.navigation.NavItem
 import kotlin.math.roundToInt
 
-enum class NavItem(val icon: ImageVector, val title: String) {
-    Home(Icons.Default.Home, "Home"),
-    Profile(Icons.Default.Person, "Profile"),
-    Premium(Icons.Default.Diamond, "Premium"),
-    Settings(Icons.Default.Settings, "Settings")
-}
-
-enum class DrawerState {
-    Opened, Closed
-}
 
 @Composable
 fun MainScreen() {
@@ -118,8 +105,7 @@ fun MainScreen() {
             Modifier
                 .offset(x = animatedOffset)
                 .scale(scale = animatedScale)
-                //.coloredShadow(color = Color.Black, alpha = 0.1f, shadowRadius = 50.dp)
-                    ,
+                .coloredShadow(color = Color.Black, alpha = 0.1f, shadowRadius = 50.dp),
             drawerState = drawerState,
             drawerClick = { drawerState = it },
         )
